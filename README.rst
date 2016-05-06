@@ -28,4 +28,9 @@ or a shorter way (similar to recursive) via::
 
     git submodule update --remote
 
+Generating Mass Windows
+=======================
 
+To generate the mass windows, run a command like the following::
+
+    dq2-ls mc15_13TeV:mc15_13TeV.*.MGPy8EG_A14N_GG_bbn1_*.merge.DAOD_SUSY10.*p2559/  | cut -d '.' -f 2,3 | tr '.' "\t" | cut -d '_' -f 1,5-7 | sed -e 's/MGPy8EG_//g' | tr '_' "\t" | sort -k2 -n > massWindows_Gbb.txt
