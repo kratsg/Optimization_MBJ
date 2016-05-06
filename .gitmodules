@@ -1,3 +1,4 @@
 [submodule "Optimization"]
 	path = Optimization
 	url = git://github.com/kratsg/Optimization.git
+	branch = master
