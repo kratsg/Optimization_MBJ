@@ -7,8 +7,9 @@ python ../Optimization/optimize.py optimize --signal 37* \
     --bkgd $(cat bkgdFiles | sed "s/$/.json/g" | tr '\n' ' ') \
     -b --bkgdUncertainty=0.3 --bkgdStatUncertainty=0.3 --insignificance=2 --lumi 10
 # produce the sig plot
+python ../Optimization/slim_significances.py
 python ../Optimization/graph-grid.py --lumi 10 --outfile plots \
-    --sigdir significances --cutdir cuts --massWindows ../massWindows_Gbb.txt \
+    --sigdir significances_slim --cutdir cuts --massWindows ../massWindows_Gbb.txt \
     --run1_csvfile ../Optimization/run1_limit.csv --run1_1sigma_csvfile ../Optimization/run1_limit_1sigma.csv
 # produce the optimal cuts
 python ../Optimization/write_all_optimal_cuts.py \
