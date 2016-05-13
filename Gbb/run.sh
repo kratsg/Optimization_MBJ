@@ -11,5 +11,8 @@ python ../Optimization/graph-grid.py --lumi 10 --outfile plots \
     --sigdir significances --cutdir cuts --massWindows ../massWindows_Gbb.txt \
     --run1_csvfile ../Optimization/run1_limit.csv --run1_1sigma_csvfile ../Optimization/run1_limit_1sigma.csv
 # produce the optimal cuts
+python ../Optimization/write_all_optimal_cuts.py \
+    --supercuts supercuts.json --significances significances \
+    --mass_windows ../massWindows_Gbb.txt -o outputHash
 python ../Optimization/graph-cuts.py --lumi 10 --outfile plots --sigdir significances \
     --supercuts supercuts.json --hashdir outputHash --massWindows ../massWindows_Gbb.txt
