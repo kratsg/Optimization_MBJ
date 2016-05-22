@@ -1,0 +1,26 @@
+[
+    {
+        "selections": "baseline_electrons_n + baseline_muons_n == {0}",
+        "pivot": [0]
+    },
+    {
+        "selections": "dphi_min > {0}",
+        "pivot": [0.4]
+    },
+    {
+        "selections": "bjets_n >= {0}",
+        "pivot": [4]
+    },
+    {
+        "selections": "(pt_jet_1 >= {0}) & (pt_jet_2 >= {0}) & (pt_jet_3 >= {0}) & (pt_jet_4 >= {0})",
+        "pivot": [30]
+    },
+    {
+        "selections": "met >= {0}",
+        "pivot": [450]
+    },
+    {
+        "selections": "meff_4j >= {0}",
+        "pivot": [1000]
+    }
+]
