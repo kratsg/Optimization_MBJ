@@ -168,7 +168,7 @@ plots:
 
   paths:
     n-1/SR-1/dphi_min:
-      rebin: 4
+      rebin: 2
       texts:
         -
           y: 0.8
@@ -181,7 +181,7 @@ plots:
     n-1/SR-1/meff_4j:
       rebin: 4
       canvas:
-        logy: true
+        logy: false
       texts:
         -
           y: 0.8
@@ -194,7 +194,7 @@ plots:
     n-1/SR-1/met:
       rebin: 4
       canvas:
-        logy: true
+        logy: false
       texts:
         -
           y: 0.8
@@ -218,7 +218,7 @@ plots:
       #xmin: 0
       #xmax: 10
     n-1/SR-2/dphi_min:
-      rebin: 4
+      rebin: 2
       texts:
         -
           y: 0.8
@@ -231,7 +231,7 @@ plots:
     n-1/SR-2/meff_4j:
       rebin: 4
       canvas:
-        logy: true
+        logy: false
       texts:
         -
           y: 0.8
@@ -244,7 +244,7 @@ plots:
     n-1/SR-2/met:
       rebin: 4
       canvas:
-        logy: true
+        logy: false
       texts:
         -
           y: 0.8
@@ -268,7 +268,7 @@ plots:
       #xmin: 0
       #xmax: 10
     n-1/SR-3/dphi_min:
-      rebin: 4
+      rebin: 2
       texts:
         -
           y: 0.8
@@ -281,7 +281,7 @@ plots:
     n-1/SR-3/meff_4j:
       rebin: 4
       canvas:
-        logy: true
+        logy: false
       texts:
         -
           y: 0.8
@@ -294,7 +294,7 @@ plots:
     n-1/SR-3/met:
       rebin: 4
       canvas:
-        logy: true
+        logy: false
       texts:
         -
           y: 0.8
@@ -318,7 +318,7 @@ plots:
       #xmin: 0
       #xmax: 10
     n-1/SR-4/dphi_min:
-      rebin: 4
+      rebin: 2
       texts:
         -
           y: 0.8
@@ -331,7 +331,7 @@ plots:
     n-1/SR-4/meff_4j:
       rebin: 4
       canvas:
-        logy: true
+        logy: false
       texts:
         -
           y: 0.8
@@ -344,7 +344,7 @@ plots:
     n-1/SR-4/met:
       rebin: 4
       canvas:
-        logy: true
+        logy: false
       texts:
         -
           y: 0.8
