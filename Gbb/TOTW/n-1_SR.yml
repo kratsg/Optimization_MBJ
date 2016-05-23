@@ -111,14 +111,14 @@ groups:
       fillstyle: solid
     stack it: true
 
-  - name: "1-top: Wt-inclusive"
-    files:
-      - /Users/kratsg/hf_tag02_v1/*.410019*.singletop*.merged
-      - /Users/kratsg/hf_tag02_v1/*.410021*.singletop*.merged
-    styles:
-      legendstyle: F
-      fillstyle: solid
-    stack it: true
+#  - name: "1-top: Wt-inclusive"
+#    files:
+#      - /Users/kratsg/hf_tag02_v1/*.410019*.singletop*.merged
+#      - /Users/kratsg/hf_tag02_v1/*.410021*.singletop*.merged
+#    styles:
+#      legendstyle: F
+#      fillstyle: solid
+#    stack it: true
 
   - name: top EW
     files:
