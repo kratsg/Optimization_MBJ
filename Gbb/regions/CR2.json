@@ -13,14 +13,14 @@
     },
     {
         "selections": "(pt_jet_1 >= {0}) & (pt_jet_2 >= {0}) & (pt_jet_3 >= {0}) & (pt_jet_4 >= {0})",
-        "pivot": [110]
+        "pivot": [150]
     },
     {
         "selections": "met >= {0}",
-        "pivot": [400]
+        "pivot": [450]
     },
     {
         "selections": "meff_4j >= {0}",
-        "pivot": [1000]
+        "pivot": [1800]
     }
 ]
