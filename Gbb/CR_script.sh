@@ -11,8 +11,8 @@ do
   supercutsLocation="regions/CR${i}.json"
   cutsLocation="${baseDir}/CR${i}Cuts"
 
-  # outputNMinus1="n-1/CR-${i}"
-  # python do_n-1_cuts.py ${files[*]} --supercuts $supercutsLocation --output $outputNMinus1 --boundaries boundaries.json -f
+  outputNMinus1="n-1/CR-${i}"
+  python ../Optimization/do_n-1_cuts.py ${files[*]} --supercuts $supercutsLocation --output $outputNMinus1 --boundaries boundaries.json -f --tree nominal --eventWeight weight_mc
 
   python ../Optimization/optimize.py cut ${files[*]} --supercuts $supercutsLocation -o $cutsLocation --numpy -b --eventWeight weight_mc --weightsFile ../Optimization/weights.yml --tree nominal
 
