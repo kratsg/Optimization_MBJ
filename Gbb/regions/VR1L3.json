@@ -5,7 +5,7 @@
     },
     {
         "selections": "mT >= {0}",
-        "pivot": [100]
+        "pivot": [90]
     },
     {
         "selections": "bjets_n >= {0}",
