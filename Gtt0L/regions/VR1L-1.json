@@ -1,0 +1,34 @@
+[
+   {
+        "selections": "(signal_electrons_n + signal_muons_n) == {0}",
+	"pivot": [1]
+    },
+    {
+        "selections": "mT <= {0}",
+        "pivot": [150.0]
+    },
+    {
+        "selections": "mTb_min >= {0}",
+        "pivot": [80.0]
+    },
+    {
+        "selections": "met >= {0}",
+	"pivot": [200.0]
+    },
+    {
+       "selections": "meff_incl >= {0}",
+       "pivot": [1750.0]
+    },
+    {
+        "selections": "jets_n >= {0}",
+        "pivot": [7]
+    },
+    {
+        "selections": "bjets_n >= {0}",
+        "pivot": [3.0]
+    },
+    {
+        "selections": "MJSum_rc_r08pt10 >= {0}",
+	"pivot": [200.0]
+    }
+]
