@@ -16,7 +16,7 @@ do
 
   python ../Optimization/optimize.py cut ${files[*]} --supercuts $supercutsLocation -o $cutsLocation --numpy -b --eventWeight weight_mc --weightsFile ../Optimization/weights.yml --tree nominal
 
-  for lumi in 10
+  for lumi in 6
   do
     significancesLocation="${baseDir}/SR${i}Significances_${lumi}"
 
@@ -32,7 +32,7 @@ do
   done
 done
 
-for lumi in 10
+for lumi in 6
 do
   python ../Optimization/find_optimal_signal_region.py --lumi $lumi --basedir $baseDir --massWindows ../massWindows_Gbb.txt --run1_csvfile ../Optimization/run1_limit.csv --run1_1sigma_csvfile ../Optimization/run1_limit_1sigma.csv --numSRs 3
 done

@@ -16,7 +16,7 @@ do
 
   python ../Optimization/optimize.py cut ${files[*]} --supercuts $supercutsLocation -o $cutsLocation --numpy -b --eventWeight weight_mc --weightsFile ../Optimization/weights.yml --tree nominal
 
-  for lumi in 10
+  for lumi in 6
   do
 
     significancesLocation="${baseDir}/CR${i}Significances_${lumi}"
@@ -33,7 +33,7 @@ do
   done
 done
 
-# for lumi in 10
+# for lumi in 6
 # do
 #   python ../Optimization/find_optimal_control_region.py --lumi $lumi --basedir $baseDir
 # done
