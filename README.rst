@@ -34,3 +34,25 @@ Generating Mass Windows
 To generate the mass windows, run a command like the following::
 
     dq2-ls mc15_13TeV:mc15_13TeV.*.MGPy8EG_A14N_GG_bbn1_*.merge.DAOD_SUSY10.*p2559/  | cut -d '.' -f 2,3 | tr '.' "\t" | cut -d '_' -f 1,5-7 | sed -e 's/MGPy8EG_//g' | tr '_' "\t" | sort -k2 -n > massWindows_Gbb.txt
+
+Making Pretty Background Yield Tables
+=====================================
+
+This can be tricky, but I remove all of the extraneous output from the script that produces a table of backgrounds and then I like to transpose it and then add in the LaTeX table separation characters::
+
+    awk '
+    {
+        for (i=1; i<=NF; i++)  {
+            a[NR,i] = $i
+        }
+    }
+    NF>p { p = NF }
+    END {
+        for(j=1; j<=p; j++) {
+            str=a[1,j]
+            for(i=2; i<=NR; i++){
+                str=str" "a[i,j];
+            }
+            print str
+        }
+    }' raw | sed 's/ / \& /g'
