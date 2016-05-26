@@ -21,7 +21,7 @@
     },
     {
         "selections": "jets_n >= {0}",
-        "pivot": [6]
+        "pivot": [5]
     },
     {
         "selections": "bjets_n >= {0}",

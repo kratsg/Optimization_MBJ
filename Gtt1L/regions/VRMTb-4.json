@@ -25,7 +25,7 @@
     },
     {
         "selections": "bjets_n >= {0}",
-        "pivot": [3.0]
+        "pivot": [4.0]
     },
     {
         "selections": "MJSum_rc_r08pt10 >= {0}",
