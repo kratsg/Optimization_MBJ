@@ -1,0 +1,8 @@
+[
+  {"name": "VR0L1", "cuts": ["../Gbb/VR0L/VR0L1Cuts/*.json"]},
+  {"name": "VR0L2", "cuts": ["../Gbb/VR0L/VR0L2Cuts/*.json"]},
+  {"name": "VR0L3", "cuts": ["../Gbb/VR0L/VR0L3Cuts/*.json"]},
+  {"name": "VR1L1", "cuts": ["../Gbb/VR1L/VR1L1Cuts/*.json"]},
+  {"name": "VR1L2", "cuts": ["../Gbb/VR1L/VR1L2Cuts/*.json"]},
+  {"name": "VR1L3", "cuts": ["../Gbb/VR1L/VR1L3Cuts/*.json"]}
+]

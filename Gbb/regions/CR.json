@@ -1,0 +1,5 @@
+[
+  {"name": "CR1", "cuts": ["../Gbb/CR/CR1Cuts/*.json"]},
+  {"name": "CR2", "cuts": ["../Gbb/CR/CR2Cuts/*.json"]},
+  {"name": "CR3", "cuts": ["../Gbb/CR/CR3Cuts/*.json"]}
+]

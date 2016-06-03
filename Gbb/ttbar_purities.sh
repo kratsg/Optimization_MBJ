@@ -1,4 +1,9 @@
 #!/bin/bash
 
-python ../Optimization/tableOfBackgrounds.py ~/hf_tag02_v1/*.merged --lumi 10 --include-dids $(cat bkgdFiles | tr '\n' ' ')
-python ../Optimization/tableOfBackgroundsVR.py ~/hf_tag02_v1/*.merged --lumi 10 --include-dids $(cat bkgdFiles | tr '\n' ' ')
+for f in regions/SR.json regions/CR.json regions/VR.json
+do
+  python ../Optimization/tableOfBackgrounds.py --regions ${f} \
+    --did_to_group ../did_to_group.json --lumi 10 \
+    --include-dids $(cat bkgdFiles | tr '\n' ' ') \
+    --hide-raw --hide-weighted --hide-invalid-dids
+done
