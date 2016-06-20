@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files=$(find ~/hf_tag02_v1/*.merged ! -name "*Gtt*" -type f)
+files=$(find ~/hf_tag2.4.11/*.merged ! -name "*Gtt*" ! -name "*data*" -type f)
 
 baseDir="CR"
 rm -rf $baseDir
