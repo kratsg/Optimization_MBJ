@@ -30,9 +30,5 @@
     {
         "selections": "MJSum_rc_r08pt10 >= {0}",
         "pivot": [0.0]
-    },
-    {
-        "selections": "top_n >= {0}",
-        "pivot": [0.0]
     }
 ]

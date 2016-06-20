@@ -13,7 +13,7 @@
     },
     {
         "selections": "met >= {0}",
-	"pivot": [450.0]
+	"pivot": [400.0]
     },
     {
        "selections": "meff_incl >= {0}",
@@ -30,9 +30,5 @@
     {
         "selections": "MJSum_rc_r08pt10 >= {0}",
 	"pivot": [200.0]
-    },
-    {
-        "selections": "top_n >= {0}",
-        "pivot": [0.0]
     }
 ]
