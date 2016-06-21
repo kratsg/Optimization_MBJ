@@ -61,9 +61,9 @@ atlasinternal: &atlasinternal
 groups:
   - name: "t#bar{t}"
     files:
-      - /Users/kratsg/hf_tag02_v1/*.407009.ttbar*.merged
-      - /Users/kratsg/hf_tag02_v1/*.407010.ttbar*.merged
-      - /Users/kratsg/hf_tag02_v1/*.407011.ttbar*.merged
+      - /Users/kratsg/hf_tag2.4.11/*.407009.ttbar*.merged
+      - /Users/kratsg/hf_tag2.4.11/*.407010.ttbar*.merged
+      - /Users/kratsg/hf_tag2.4.11/*.407011.ttbar*.merged
     styles:
       legendstyle: F
       fillstyle: solid
@@ -79,7 +79,7 @@ groups:
 
   - name: W+jets
     files:
-      - /Users/kratsg/hf_tag02_v1/*.363*.W_sherpa*.merged
+      - /Users/kratsg/hf_tag2.4.11/*.363*.W_sherpa*.merged
     styles:
       legendstyle: F
       fillstyle: solid
@@ -87,7 +87,7 @@ groups:
 
   - name: Z+jets
     files:
-      - /Users/kratsg/hf_tag02_v1/*.363*.Z_sherpa*.merged
+      - /Users/kratsg/hf_tag2.4.11/*.363*.Z_sherpa*.merged
     styles:
       legendstyle: F
       fillstyle: solid
@@ -95,8 +95,8 @@ groups:
 
   - name: "1-top: t-channel"
     files:
-      - /Users/kratsg/hf_tag02_v1/*.410011*.singletop*.merged
-      - /Users/kratsg/hf_tag02_v1/*.410012*.singletop*.merged
+      - /Users/kratsg/hf_tag2.4.11/*.410011*.singletop*.merged
+      - /Users/kratsg/hf_tag2.4.11/*.410012*.singletop*.merged
     styles:
       legendstyle: F
       fillstyle: solid
@@ -104,8 +104,8 @@ groups:
 
   - name: "1-top: s-channel"
     files:
-      - /Users/kratsg/hf_tag02_v1/*.410025*.singletop*.merged
-      - /Users/kratsg/hf_tag02_v1/*.410026*.singletop*.merged
+      - /Users/kratsg/hf_tag2.4.11/*.410025*.singletop*.merged
+      - /Users/kratsg/hf_tag2.4.11/*.410026*.singletop*.merged
     styles:
       legendstyle: F
       fillstyle: solid
@@ -113,8 +113,8 @@ groups:
 
 #  - name: "1-top: Wt-inclusive"
 #    files:
-#      - /Users/kratsg/hf_tag02_v1/*.410019*.singletop*.merged
-#      - /Users/kratsg/hf_tag02_v1/*.410021*.singletop*.merged
+#      - /Users/kratsg/hf_tag2.4.11/*.410019*.singletop*.merged
+#      - /Users/kratsg/hf_tag2.4.11/*.410021*.singletop*.merged
 #    styles:
 #      legendstyle: F
 #      fillstyle: solid
@@ -122,7 +122,7 @@ groups:
 
   - name: top EW
     files:
-      - /Users/kratsg/hf_tag02_v1/*topEW*.merged
+      - /Users/kratsg/hf_tag2.4.11/*topEW*.merged
     styles:
       legendstyle: F
       fillstyle: solid
