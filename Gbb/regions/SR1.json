@@ -17,10 +17,10 @@
     },
     {
         "selections": "met >= {0}",
-        "pivot": [350]
+        "pivot": [500]
     },
     {
         "selections": "meff_4j >= {0}",
-        "pivot": [2100]
+        "pivot": [1900]
     }
 ]

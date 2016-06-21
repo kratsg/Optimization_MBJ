@@ -6,7 +6,7 @@ baseDir="VR1L"
 rm -rf $baseDir
 mkdir -p $baseDir
 
-for i in 1 2 3
+for i in 1 3
 do
   supercutsLocation="regions/VR1L${i}.json"
   cutsLocation="${baseDir}/VR1L${i}Cuts"
