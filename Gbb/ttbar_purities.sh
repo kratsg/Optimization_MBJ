@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for f in regions/SR.json regions/CR.json regions/VR.json
+for f in regions/SRCR.json regions/VR.json
 do
   python ../Optimization/tableOfBackgrounds.py --regions ${f} \
     --did_to_group ../did_to_group.json --lumi 10 \
