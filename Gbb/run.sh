@@ -1,6 +1,6 @@
 # produce cuts for all the samples
 python ../optimize.py cut -b --numpy --ncores 7 \
-    $(find ~/hf_tag2.4.11/*.merged ! -name "*Gtt*" ! -name "*data*" -type f) \
+    $(find ~/hf_tag2.4.11-1-0/*.root ! -name "*Gtt*" ! -name "*data*" -type f) \
     --tree nominal --eventWeight weight_mc --weightsFile ../weights.yml
 # calculate significances with lumi = 10 ifb
 python ../Optimization/optimize.py optimize --signal 37* \

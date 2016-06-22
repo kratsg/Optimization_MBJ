@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files=$(find ~/hf_tag2.4.11/*.merged ! -name "*Gtt*" ! -name "*data*" -type f)
+files=$(find ~/hf_tag2.4.11-1-0/*.root ! -name "*Gtt*" ! -name "*data*" -type f)
 
 baseDir="SR"
 rm -rf $baseDir
@@ -12,9 +12,9 @@ do
   cutsLocation="${baseDir}/SR${i}Cuts"
 
   outputNMinus1="n-1/SR-${i}"
-  python ../Optimization/do_n-1_cuts.py ${files[*]} --supercuts $supercutsLocation --output $outputNMinus1 --boundaries boundaries.json -f --tree nominal --eventWeight weight_mc
+  python ../Optimization/do_n-1_cuts.py ${files[*]} --supercuts $supercutsLocation --output $outputNMinus1 --boundaries boundaries.json -f --tree nominal --eventWeight "weight_mc*weight_btag*weight_elec*weight_muon*weight_pu"
 
-  python ../Optimization/optimize.py cut ${files[*]} --supercuts $supercutsLocation -o $cutsLocation --numpy -b --eventWeight weight_mc --weightsFile ../Optimization/weights.yml --tree nominal
+  python ../Optimization/optimize.py cut ${files[*]} --supercuts $supercutsLocation -o $cutsLocation --numpy -b --eventWeight "weight_mc*weight_btag*weight_elec*weight_muon*weight_pu" --weightsFile ../Optimization/weights.yml --tree nominal
 
   for lumi in 10
   do
