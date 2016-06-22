@@ -17,7 +17,7 @@
     },
     {
         "selections": "met >= {0}",
-        "pivot": [500]
+        "pivot": [450]
     },
     {
         "selections": "meff_4j >= {0}",
