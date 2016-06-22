@@ -17,7 +17,7 @@
     },
     {
        "selections": "meff_incl >= {0}",
-       "pivot": [1250.0]
+       "pivot": [1200.0]
     },
     {
         "selections": "jets_n >= {0}",

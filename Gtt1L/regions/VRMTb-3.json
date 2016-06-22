@@ -13,11 +13,11 @@
     },
     {
         "selections": "met >= {0}",
-        "pivot": [350.0]
+        "pivot": [300.0]
     },
     {
        "selections": "meff_incl >= {0}",
-       "pivot": [1550.0]
+       "pivot": [1500.0]
     },
     {
         "selections": "jets_n >= {0}",
