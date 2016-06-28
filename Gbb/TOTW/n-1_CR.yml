@@ -61,9 +61,9 @@ atlasinternal: &atlasinternal
 groups:
   - name: "t#bar{t}"
     files:
-      - /Users/kratsg/hf_tag2.4.11-1-0/*.407009.ttbar*.merged
-      - /Users/kratsg/hf_tag2.4.11-1-0/*.407010.ttbar*.merged
-      - /Users/kratsg/hf_tag2.4.11-1-0/*.407011.ttbar*.merged
+      - /Users/kratsg/hf_tag2.4.11-1-0/*.407009.ttbar*.root
+      - /Users/kratsg/hf_tag2.4.11-1-0/*.407010.ttbar*.root
+      - /Users/kratsg/hf_tag2.4.11-1-0/*.407011.ttbar*.root
     styles:
       legendstyle: F
       fillstyle: solid
@@ -79,7 +79,7 @@ groups:
 
   - name: W+jets
     files:
-      - /Users/kratsg/hf_tag2.4.11-1-0/*.363*.W_sherpa*.merged
+      - /Users/kratsg/hf_tag2.4.11-1-0/*.363*.W_sherpa*.root
     styles:
       legendstyle: F
       fillstyle: solid
@@ -87,7 +87,7 @@ groups:
 
   - name: Z+jets
     files:
-      - /Users/kratsg/hf_tag2.4.11-1-0/*.363*.Z_sherpa*.merged
+      - /Users/kratsg/hf_tag2.4.11-1-0/*.363*.Z_sherpa*.root
     styles:
       legendstyle: F
       fillstyle: solid
@@ -95,8 +95,8 @@ groups:
 
   - name: "1-top: t-channel"
     files:
-      - /Users/kratsg/hf_tag2.4.11-1-0/*.410011*.singletop*.merged
-      - /Users/kratsg/hf_tag2.4.11-1-0/*.410012*.singletop*.merged
+      - /Users/kratsg/hf_tag2.4.11-1-0/*.410011*.singletop*.root
+      - /Users/kratsg/hf_tag2.4.11-1-0/*.410012*.singletop*.root
     styles:
       legendstyle: F
       fillstyle: solid
@@ -104,8 +104,8 @@ groups:
 
   - name: "1-top: s-channel"
     files:
-      - /Users/kratsg/hf_tag2.4.11-1-0/*.410025*.singletop*.merged
-      - /Users/kratsg/hf_tag2.4.11-1-0/*.410026*.singletop*.merged
+      - /Users/kratsg/hf_tag2.4.11-1-0/*.410025*.singletop*.root
+      - /Users/kratsg/hf_tag2.4.11-1-0/*.410026*.singletop*.root
     styles:
       legendstyle: F
       fillstyle: solid
@@ -113,8 +113,8 @@ groups:
 
 #  - name: "1-top: Wt-inclusive"
 #    files:
-#      - /Users/kratsg/hf_tag2.4.11-1-0/*.410019*.singletop*.merged
-#      - /Users/kratsg/hf_tag2.4.11-1-0/*.410021*.singletop*.merged
+#      - /Users/kratsg/hf_tag2.4.11-1-0/*.410019*.singletop*.root
+#      - /Users/kratsg/hf_tag2.4.11-1-0/*.410021*.singletop*.root
 #    styles:
 #      legendstyle: F
 #      fillstyle: solid
@@ -122,7 +122,7 @@ groups:
 
   - name: top EW
     files:
-      - /Users/kratsg/hf_tag2.4.11-1-0/*topEW*.merged
+      - /Users/kratsg/hf_tag2.4.11-1-0/*topEW*.root
     styles:
       legendstyle: F
       fillstyle: solid
@@ -213,56 +213,6 @@ plots:
           <<: *topline
       #ymin: 0
       #ymax: 3
-      ylabel: events
-      xlabel: "# of #it{b}-jets"
-      #xmin: 0
-      #xmax: 10
-    n-1/CR-2/mT:
-      rebin: 2
-      texts:
-        -
-          y: 0.8
-          label: "CR2"
-          <<: *topline
-      #ymin: 0
-      #ymax: 0.75
-      ylabel: events
-      xlabel: "m_{T}"
-    n-1/CR-2/meff_4j:
-      rebin: 4
-      canvas:
-        logy: false
-      texts:
-        -
-          y: 0.8
-          label: "CR2"
-          <<: *topline
-      #ymin: 0.01
-      #ymax: 2
-      ylabel: events
-      xlabel: "m_{eff}^{4j}"
-    n-1/CR-2/met:
-      rebin: 4
-      canvas:
-        logy: false
-      texts:
-        -
-          y: 0.8
-          label: "CR2"
-          <<: *topline
-      #ymin: 0.01
-      #ymax: 5
-      ylabel: events
-      xlabel: "#slash{E}_{T}"
-    n-1/CR-2/bjets_n:
-      rebin: 1
-      texts:
-        -
-          y: 0.8
-          label: "CR2"
-          <<: *topline
-      #ymin: 0
-      #ymax: 1.5
       ylabel: events
       xlabel: "# of #it{b}-jets"
       #xmin: 0
