@@ -7,9 +7,7 @@
     },
     {
         "selections": "dPhiMETMin >= {0}",
-        "st3": [
-            [0.0, 1.0, 0.1]
-        ]
+        "pivot": [0.4]
     },
     {
         "selections": "met >= {0}",
