@@ -34,7 +34,7 @@
         ]
     },
     {
-        "selections": "mjsum >= {0}",
+        "selections": "mjsum/1000 >= {0}",
         "st3": [
             [0, 500, 100]
         ]
