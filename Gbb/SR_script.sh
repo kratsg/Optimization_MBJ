@@ -22,9 +22,11 @@ do
 
     python ../Optimization/optimize.py optimize --signal 37* --bkgd $(cat bkgdFiles | sed "s/$/.json/g" | tr '\n' ' ') --searchDirectory $cutsLocation -b --o $significancesLocation --bkgdUncertainty=0.3 --bkgdStatUncertainty=0.3 --insignificance=0.75 --lumi $lumi
 
-    outputHashLocation="${baseDir}/outputHash_SR${i}_${lumi}"
+    summaryLocation="${baseDir}/summary_SR${i}_${lumi}.json"
+    python ../Optimization/optimize.py summary --searchDirectory $significancesLocation --massWindows ../massWindows_Gbb.txt --output $summaryLocation
 
-    python ../Optimization/write_all_optimal_cuts.py --supercuts $supercutsLocation --significances $significancesLocation -o $outputHashLocation --mass_windows ../massWindows_Gbb.txt
+    outputHashLocation="${baseDir}/outputHash_SR${i}_${lumi}"
+    python ../Optimization/optimize.py hash $summaryLocation --supercuts $supercutsLocation -o $outputHashLocation --use-summary
 
     outputFilePlots="SR${i}_${lumi}"
     python ../Optimization/graph-grid.py --lumi $lumi --outfile $outputFilePlots --sigdir $significancesLocation --cutdir $cutsLocation --massWindows ../massWindows_Gbb.txt --run1_csvfile ../Optimization/run1_limit.csv --run1_1sigma_csvfile ../Optimization/run1_limit_1sigma.csv --massWindows ../massWindows_Gbb.txt

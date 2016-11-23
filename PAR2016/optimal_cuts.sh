@@ -1,4 +1,7 @@
 #!/bin/bash
 
-python ../Optimization/write_all_optimal_cuts.py --supercuts=supercuts/normal_${version}.json --significances significances/normal_${version} -o outputHash/normal_${version} --mass_windows ../massWindows_Gtt.txt
-python ../Optimization/write_all_optimal_cuts.py --supercuts=supercuts/jigsaw_${version}.json --significances significances/jigsaw_${version} -o outputHash/jigsaw_${version} --mass_windows ../massWindows_Gtt.txt
+python ../Optimization/optimize.py summary --searchDirectory significances/normal_${version} --massWindows ../massWindows_Gtt.txt --output summary_normal_${version}.json
+python ../Optimization/optimize.py hash summary_normal_${version}.json --supercuts supercuts/normal_${version}.json -o outputHash/normal_${version} --use-summary
+
+python ../Optimization/optimize.py summary --searchDirectory significances/jigsaw_${version} --massWindows ../massWindows_Gtt.txt --output summary_jigsaw_${version}.json
+python ../Optimization/optimize.py hash summary_jigsaw_${version}.json --supercuts supercuts/jigsaw_${version}.json -o outputHash/jigsaw_${version} --use-summary
