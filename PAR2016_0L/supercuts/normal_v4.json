@@ -22,8 +22,10 @@
         ]
     },
     {
-        "selections": "multiplicity_jet >= {0}",
-        "pivot": [6]
+        "selections": "(razor_Ga_n + razor_Gb_n) >= {0}",
+        "st3": [
+            [6, 9, 1]
+        ]
     },
     {
         "selections": "multiplicity_jet_b >= {0}",
@@ -36,17 +38,11 @@
         "st3": [
             [0, 500, 100]
         ]
-    }
-    {
-        "selections": "razor_Ga_n >= {0}",
-        "st3": [
-            [1, 5, 1]
-        ]
     },
     {
-        "selections": "razor_Gb_n >= {0}",
+        "selections": "abs(razor_Ga_n - razor_Gb_n) >= {0}",
         "st3": [
-            [4, 8, 1]
+            [0, 6, 1]
         ]
     }
 ]
