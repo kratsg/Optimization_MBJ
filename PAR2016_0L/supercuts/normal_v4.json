@@ -1,0 +1,52 @@
+[
+    {
+        "selections": "mTb >= {0}",
+        "st3": [
+            [0, 320, 80]
+        ]
+    },
+    {
+        "selections": "dPhiMETMin >= {0}",
+        "pivot": [0.4]
+    },
+    {
+        "selections": "met >= {0}",
+        "st3": [
+            [200, 600, 100]
+        ]
+    },
+    {
+       "selections": "m_effective >= {0}",
+        "st3": [
+            [1000, 2000, 200]
+        ]
+    },
+    {
+        "selections": "multiplicity_jet >= {0}",
+        "pivot": [6]
+    },
+    {
+        "selections": "multiplicity_jet_b >= {0}",
+         "st3": [
+            [3, 5, 1]
+        ]
+    },
+    {
+        "selections": "mjsum/1000 >= {0}",
+        "st3": [
+            [0, 500, 100]
+        ]
+    }
+    {
+        "selections": "razor_Ga_n >= {0}",
+        "st3": [
+            [1, 5, 1]
+        ]
+    },
+    {
+        "selections": "razor_Gb_n >= {0}",
+        "st3": [
+            [4, 8, 1]
+        ]
+    }
+]
