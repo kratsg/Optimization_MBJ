@@ -13,7 +13,7 @@
     },
     {
        "selections": "m_effective >= {0}",
-	"pivot": [2600.0]
+	"pivot": [2200.0]
     },
     {
         "selections": "multiplicity_jet >= {0}",
