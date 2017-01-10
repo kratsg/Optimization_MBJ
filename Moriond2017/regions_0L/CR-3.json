@@ -9,7 +9,7 @@
     },
     {
         "selections": "met >= {0}",
-	"pivot": [300.0]
+	"pivot": [200.0]
     },
     {
        "selections": "m_effective >= {0}",
@@ -25,7 +25,7 @@
     },
     {
         "selections": "mjsum/1000 >= {0}",
-	"pivot": [0.0]
+	"pivot": [100.0]
     },
     {
       "selections": "razor_Ga_n+razor_Gb_n - multiplicity_jet == {0}",

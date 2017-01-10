@@ -9,7 +9,7 @@
     },
     {
         "selections": "met >= {0}",
-	"pivot": [250.0]
+	"pivot": [200.0]
     },
     {
        "selections": "m_effective >= {0}",
