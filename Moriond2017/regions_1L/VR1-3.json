@@ -1,11 +1,11 @@
 [
     {
-        "selections": "mTb >= {0}",
+        "selections": "mTb <= {0}",
 	"pivot": [80.0]
     },
     {
         "selections": "met >= {0}",
-	"pivot": [350.0]
+	"pivot": [300.0]
     },
     {
        "selections": "m_effective >= {0}",

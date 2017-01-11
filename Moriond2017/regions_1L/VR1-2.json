@@ -1,15 +1,15 @@
 [
     {
         "selections": "mTb >= {0}",
-	"pivot": [160.0]
+	"pivot": [0.0]
     },
     {
         "selections": "met >= {0}",
-	"pivot": [450.0]
+	"pivot": [250.0]
     },
     {
        "selections": "m_effective >= {0}",
-	"pivot": [1800.0]
+	"pivot": [1200.0]
     },
     {
         "selections": "multiplicity_jet >= {0}",
@@ -20,7 +20,7 @@
 	"pivot": [3.0]
     },
     {
-        "selections": "mjsum/1000 >= {0}",
+        "selections": "mjsum/1000 <= {0}",
 	"pivot": [100.0]
     },
     {
