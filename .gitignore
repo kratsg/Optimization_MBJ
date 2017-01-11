@@ -1,7 +1,7 @@
 cuts
 significances*
 outputHash*
-plots*
+*plots*/
 .DS_Store
 SR
 CR
@@ -11,4 +11,4 @@ VR
 VR0
 VR1
 *~
-summary_*.json
+*summary_*.json
