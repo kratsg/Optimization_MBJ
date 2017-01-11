@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for f in $(find regions_${version}/*R-*.json)
+for f in $(find regions_${version}/*R*-*.json)
 do
   filename=$(basename "$f")
   extension="${f##*.}"
