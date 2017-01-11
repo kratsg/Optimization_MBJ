@@ -17,7 +17,7 @@
     },
     {
         "selections": "multiplicity_jet >= {0}",
-	"pivot": [6.0]
+	"pivot": [7.0]
     },
     {
         "selections": "multiplicity_jet_b >= {0}",
