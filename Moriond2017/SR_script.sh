@@ -28,7 +28,7 @@ do
     outputHashLocation="${baseDir}/outputHash_SR${i}_${lumi}"
     python ../Optimization/optimize.py hash $summaryLocation --supercuts $supercutsLocation -o $outputHashLocation --use-summary
 
-    outputFilePlots="SR${i}_${lumi}"
+    outputFilePlots="SR${i}_${lumi}_${version}"
     python ../Optimization/graph-grid.py --summary $summaryLocation --lumi $lumi -o $outputFilePlots --do-run1 --run1-excl ../Optimization/run1_limit.csv --run1-1sigma ../Optimization/run1_limit_1sigma.csv -b
     python ../Optimization/graph-cuts.py --summary $summaryLocation --lumi $lumi -o $outputFilePlots --do-run1 --run1-excl ../Optimization/run1_limit.csv --run1-1sigma ../Optimization/run1_limit_1sigma.csv -b --outputHash $outputHashLocation --supercuts $supercutsLocation
 
