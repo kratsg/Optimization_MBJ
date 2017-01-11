@@ -1,3 +1,8 @@
 #!/bin/bash
 
-python ../Optimization/summary-comparison.py --base-summary summary_baseline_0L.json --comp-summary summary_baseline_${version}.json --lumi 35 -o baseline_${version} -b
+for lumi in 35
+do
+
+  python ../Optimization/summary-comparison.py --base-summary summary_baseline_${version}.json --comp-summary summary_Gtt${version}_optimalSR_${lumi}.json --lumi ${lumi} -o Gtt${version}_optimalSR_${lumi} -b
+
+done
