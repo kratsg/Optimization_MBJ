@@ -1,0 +1,5 @@
+[
+  {"name": "VR1-1", "cuts": ["../Moriond2017/VR1/1L/VR11Cuts/*.json"]},
+  {"name": "VR1-2", "cuts": ["../Moriond2017/VR1/1L/VR12Cuts/*.json"]},
+  {"name": "VR1-3", "cuts": ["../Moriond2017/VR1/1L/VR13Cuts/*.json"]}
+]
