@@ -10,7 +10,7 @@ python ../Optimization/optimize.py optimize --signal 37* \
 python ../Optimization/slim_significances.py
 python ../Optimization/graph-grid.py --lumi 10 --outfile plots \
     --sigdir significances_slim --cutdir cuts --massWindows ../massWindows_Gbb.txt \
-    --run1_csvfile ../Optimization/run1_limit.csv --run1_1sigma_csvfile ../Optimization/run1_limit_1sigma.csv
+    --run1_csvfile ../run1_limit.csv --run1_1sigma_csvfile ../run1_limit_1sigma.csv
 # produce the optimal cuts
 python ../Optimization/optimize.py summary \
   --searchDirectory significances --massWindows ../massWindows_Gbb.txt \

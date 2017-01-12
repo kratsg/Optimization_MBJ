@@ -29,12 +29,12 @@ do
     python ../Optimization/optimize.py hash $summaryLocation --supercuts $supercutsLocation -o $outputHashLocation --use-summary
 
     outputFilePlots="SR${i}_${lumi}"
-    python ../Optimization/graph-grid.py --lumi $lumi --outfile $outputFilePlots --sigdir $significancesLocation --cutdir $cutsLocation --massWindows ../massWindows_Gtt.txt --run1_csvfile ../Optimization/run1_limit.csv --run1_1sigma_csvfile ../Optimization/run1_limit_1sigma.csv --massWindows ../massWindows_Gtt.txt
+    python ../Optimization/graph-grid.py --lumi $lumi --outfile $outputFilePlots --sigdir $significancesLocation --cutdir $cutsLocation --massWindows ../massWindows_Gtt.txt --run1_csvfile ../run1_limit.csv --run1_1sigma_csvfile ../run1_limit_1sigma.csv --massWindows ../massWindows_Gtt.txt
     python ../Optimization/graph-cuts.py --lumi $lumi --outfile $outputFilePlots --sigdir $significancesLocation --supercuts $supercutsLocation --hashdir $outputHashLocation --massWindows ../massWindows_Gtt.txt
   done
 done
 
 for lumi in 10
 do
-  python ../Optimization/find_optimal_signal_region.py --lumi $lumi --basedir $baseDir --massWindows ../massWindows_Gtt.txt --run1_csvfile ../Optimization/run1_limit.csv --run1_1sigma_csvfile ../Optimization/run1_limit_1sigma.csv --numSRs 3
+  python ../Optimization/find_optimal_signal_region.py --lumi $lumi --basedir $baseDir --massWindows ../massWindows_Gtt.txt --run1_csvfile ../run1_limit.csv --run1_1sigma_csvfile ../run1_limit_1sigma.csv --numSRs 3
 done
