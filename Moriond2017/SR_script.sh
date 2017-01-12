@@ -11,9 +11,6 @@ do
   supercutsLocation="regions_${version}/SR-${i}.json"
   cutsLocation="${baseDir}/SR${i}Cuts"
 
-  #outputNMinus1="n-1/SR-${i}"
-  #python ../Optimization/do_n-1_cuts.py ${files[*]} --supercuts $supercutsLocation --output $outputNMinus1 --boundaries boundaries.json -f --tree nominal --eventWeight weight_mc
-
   python ../Optimization/optimize.py cut ${files[*]} --supercuts=$supercutsLocation -o $cutsLocation --numpy -b --eventWeight "event_weight" --weightsFile ../Optimization/weights.json --tree oTree --ncores=7
 
   for lumi in 35
