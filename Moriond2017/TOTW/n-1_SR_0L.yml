@@ -148,9 +148,9 @@ groups:
       fillstyle: solid
     stack it: true
 
-  - name: "m_{#tilde{g}, #tilde{#chi}} = 1700, 200"
+  - name: "m_{#tilde{g}, #tilde{#chi}} = 2000, 200"
     files:
-      - /Users/kratsg/2.4.19-0-0/0L/user*370153*.root
+      - /Users/kratsg/2.4.19-0-0/0L/user*370179*.root
     styles:
       legendstyle: L
       drawstyle: hist
@@ -158,9 +158,9 @@ groups:
     stack it: false
     #scale factor: 200
 
-  - name: "m_{#tilde{g}, #tilde{#chi}} = 1700, 800"
+  - name: "m_{#tilde{g}, #tilde{#chi}} = 2000, 800"
     files:
-      - /Users/kratsg/2.4.19-0-0/0L/user*370156*.root
+      - /Users/kratsg/2.4.19-0-0/0L/user*370182*.root
     styles:
       legendstyle: L
       drawstyle: hist
@@ -168,15 +168,15 @@ groups:
     stack it: false
     #scale factor: 200
 
-  - name: "m_{#tilde{g}, #tilde{#chi}} = 1700, 1345"
+  - name: "m_{#tilde{g}, #tilde{#chi}} = 2000, 1400 #times 10"
     files:
-      - /Users/kratsg/2.4.19-0-0/0L/user*370159*.root
+      - /Users/kratsg/2.4.19-0-0/0L/user*370185*.root
     styles:
       legendstyle: L
       drawstyle: hist
       linewidth: 4
     stack it: false
-    #scale factor: 200
+    scale factor: 10
 
 
 # plots:
@@ -218,9 +218,9 @@ plots:
       logy: false
       ndivisions: 505
     legend:
-      leftmargin: 0.425
+      leftmargin: 0.40
       topmargin: 0.125
-      rightmargin: 0.075
+      rightmargin: 0.1
       textsize: 14
       entrysep: 0.01
       entryheight: 0.02
@@ -234,7 +234,7 @@ plots:
           label: "Signal Region 1"
           <<: *topline
       ymin: 0
-      ymax: 3
+      ymax: 1
       ylabel: events
       xlabel: "m_{T}^{b}"
     n-1/SR-1/m_effective:
@@ -244,8 +244,8 @@ plots:
           y: 0.84
           label: "Signal Region 1"
           <<: *topline
-      ymin: 0.01
-      ymax: 3
+      ymin: 0
+      ymax: 1.5
       ylabel: events
       xlabel: "m_{eff}"
     n-1/SR-1/met:
@@ -256,7 +256,7 @@ plots:
           label: "Signal Region 1"
           <<: *topline
       ymin: 0
-      ymax: 2
+      ymax: 1
       ylabel: events
       xlabel: "#slash{E}_{T}"
     n-1/SR-1/multiplicity_jet:
@@ -267,7 +267,7 @@ plots:
           label: "Signal Region 1"
           <<: *topline
       ymin: 0
-      ymax: 4
+      ymax: 2
       ylabel: events
       xlabel: "# of jets"
     n-1/SR-1/multiplicity_jet_b:
@@ -278,7 +278,7 @@ plots:
           label: "Signal Region 1"
           <<: *topline
       ymin: 0
-      ymax: 10
+      ymax: 6
       ylabel: events
       xlabel: "# of #it{b}-jets"
       xmin: 0
@@ -290,7 +290,7 @@ plots:
           label: "Signal Region 1"
           <<: *topline
       ymin: 0
-      ymax: 5
+      ymax: 2
       ylabel: events
       xlabel: "M_{J}^{#Sigma}"
     n-1/SR-2/mTb:
@@ -301,7 +301,7 @@ plots:
           label: "Signal Region 2"
           <<: *topline
       ymin: 0
-      ymax: 3
+      ymax: 2
       ylabel: events
       xlabel: "m_{T}^{b}"
     n-1/SR-2/m_effective:
@@ -312,7 +312,7 @@ plots:
           label: "Signal Region 2"
           <<: *topline
       ymin: 0
-      ymax: 3
+      ymax: 2
       ylabel: events
       xlabel: "m_{eff}"
     n-1/SR-2/met:
@@ -334,7 +334,7 @@ plots:
           label: "Signal Region 2"
           <<: *topline
       ymin: 0
-      ymax: 6
+      ymax: 3
       ylabel: events
       xlabel: "# of jets"
     n-1/SR-2/multiplicity_jet_b:
@@ -354,10 +354,10 @@ plots:
       texts:
         -
           y: 0.84
-          label: "Signal Region 1"
+          label: "Signal Region 2"
           <<: *topline
       ymin: 0
-      ymax: 6
+      ymax: 3
       ylabel: events
       xlabel: "M_{J}^{#Sigma}"
     n-1/SR-3/mTb:
@@ -412,7 +412,7 @@ plots:
           label: "Signal Region 3"
           <<: *topline
       ymin: 0.1
-      ymax: 30000
+      ymax: 50000
       canvas:
         logy: true
       ylabel: events
