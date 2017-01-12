@@ -15,14 +15,14 @@
 #       size: <number> (for SetTextSize(...))
 #       label: <string> (what to actually say)
 atlas: &atlas
-  x: 0.225
+  x: 0.25
   y: 0.88
   font: 73
   size: 25
   label: ATLAS
 
 internal: &internal
-  x: 0.35
+  x: 0.375
   font: 43
   label: Internal
   <<: *atlas
@@ -70,7 +70,9 @@ groups:
 
   - name: "t#bar{t}"
     files:
-      - /Users/kratsg/2.4.19-0-0/0L/user*ttbar*.root
+      - /Users/kratsg/2.4.19-0-0/0L/user*407009*.root
+      - /Users/kratsg/2.4.19-0-0/0L/user*407010*.root
+      - /Users/kratsg/2.4.19-0-0/0L/user*407011*.root
     styles:
       legendstyle: F
       fillstyle: solid
@@ -154,7 +156,7 @@ groups:
       drawstyle: hist
       linewidth: 4
     stack it: false
-    scale factor: 200
+    #scale factor: 200
 
   - name: "m_{#tilde{g}, #tilde{#chi}} = 1700, 800"
     files:
@@ -164,7 +166,7 @@ groups:
       drawstyle: hist
       linewidth: 4
     stack it: false
-    scale factor: 200
+    #scale factor: 200
 
   - name: "m_{#tilde{g}, #tilde{#chi}} = 1700, 1345"
     files:
@@ -174,7 +176,7 @@ groups:
       drawstyle: hist
       linewidth: 4
     stack it: false
-    scale factor: 200
+    #scale factor: 200
 
 
 # plots:
@@ -188,33 +190,36 @@ plots:
     texts:
       - *atlas
       - *internal
+      -
+        x: 0.525
+        y: 0.88
+        font: 43
+        size: 20
+        label: "#sqrt{s} = 13 TeV, L_{int} #approx 35 fb^{-1}"
       - &topline
         x: 0.25
-        y: 0.84
+        y: 0.78
         font: 43
         size: 18
-        label: "#sqrt{s} = 13 TeV, , L_{int} #approx 35 fb^{-1}"
+        label: "signal lepton veto"
+
       -
-        y: 0.8
-        label: "Preselection, signal lepton veto"
-        <<: *topline
-      -
-        y: 0.76
+        y: 0.74
         label: "#geq 4 jets, #geq 3 #it{b}-jets"
         <<: *topline
       -
-        y: 0.72
+        y: 0.70
         label: "#slash{E}_{T} > 200 GeV, #Delta #Phi_{min} > 0.4"
         <<: *topline
 
     canvas:
       width: 650
       height: 500
-      logy: true
+      logy: false
       ndivisions: 505
     legend:
       leftmargin: 0.425
-      topmargin: 0.025
+      topmargin: 0.125
       rightmargin: 0.075
       textsize: 14
       entrysep: 0.01
@@ -222,39 +227,35 @@ plots:
 
   paths:
     n-1/SR-1/mTb:
-      rebin: 4
+      rebin: 1
       texts:
         -
-          y: 0.8
-          label: "SR1"
+          y: 0.84
+          label: "Signal Region 1"
           <<: *topline
       ymin: 0
-      ymax: 0.5
+      ymax: 3
       ylabel: events
       xlabel: "m_{T}^{b}"
     n-1/SR-1/m_effective:
-      rebin: 4
-      canvas:
-        logy: true
+      rebin: 1
       texts:
         -
-          y: 0.8
-          label: "SR1"
+          y: 0.84
+          label: "Signal Region 1"
           <<: *topline
       ymin: 0.01
-      ymax: 2
+      ymax: 3
       ylabel: events
       xlabel: "m_{eff}"
     n-1/SR-1/met:
-      rebin: 4
-      canvas:
-        logy: true
+      rebin: 1
       texts:
         -
-          y: 0.8
-          label: "SR1"
+          y: 0.84
+          label: "Signal Region 1"
           <<: *topline
-      ymin: 0.01
+      ymin: 0
       ymax: 2
       ylabel: events
       xlabel: "#slash{E}_{T}"
@@ -262,22 +263,22 @@ plots:
       rebin: 1
       texts:
         -
-          y: 0.8
-          label: "SR1"
+          y: 0.84
+          label: "Signal Region 1"
           <<: *topline
       ymin: 0
-      ymax: 0.5
+      ymax: 4
       ylabel: events
       xlabel: "# of jets"
     n-1/SR-1/multiplicity_jet_b:
       rebin: 1
       texts:
         -
-          y: 0.8
-          label: "SR1"
+          y: 0.84
+          label: "Signal Region 1"
           <<: *topline
       ymin: 0
-      ymax: 3
+      ymax: 10
       ylabel: events
       xlabel: "# of #it{b}-jets"
       xmin: 0
@@ -285,140 +286,145 @@ plots:
     n-1/SR-1/mjsum:
       texts:
         -
-          y: 0.8
-          label: "SR1"
+          y: 0.84
+          label: "Signal Region 1"
           <<: *topline
-      ymin: 0.75
+      ymin: 0
+      ymax: 5
       ylabel: events
       xlabel: "M_{J}^{#Sigma}"
     n-1/SR-2/mTb:
-      rebin: 4
+      rebin: 1
       texts:
         -
-          y: 0.8
-          label: "SR2"
+          y: 0.84
+          label: "Signal Region 2"
           <<: *topline
       ymin: 0
-      ymax: 0.75
+      ymax: 3
       ylabel: events
       xlabel: "m_{T}^{b}"
     n-1/SR-2/m_effective:
-      rebin: 4
-      canvas:
-        logy: true
+      rebin: 1
       texts:
         -
-          y: 0.8
-          label: "SR2"
+          y: 0.84
+          label: "Signal Region 2"
           <<: *topline
-      ymin: 0.01
-      ymax: 2
+      ymin: 0
+      ymax: 3
       ylabel: events
       xlabel: "m_{eff}"
     n-1/SR-2/met:
-      rebin: 4
-      canvas:
-        logy: true
+      rebin: 1
       texts:
         -
-          y: 0.8
-          label: "SR2"
+          y: 0.84
+          label: "Signal Region 2"
           <<: *topline
-      ymin: 0.01
-      ymax: 5
+      ymin: 0
+      ymax: 10
       ylabel: events
       xlabel: "#slash{E}_{T}"
     n-1/SR-2/multiplicity_jet:
       rebin: 1
       texts:
         -
-          y: 0.8
-          label: "SR2"
+          y: 0.84
+          label: "Signal Region 2"
           <<: *topline
       ymin: 0
-      ymax: 0.75
+      ymax: 6
       ylabel: events
       xlabel: "# of jets"
     n-1/SR-2/multiplicity_jet_b:
       rebin: 1
       texts:
         -
-          y: 0.8
-          label: "SR2"
+          y: 0.84
+          label: "Signal Region 2"
           <<: *topline
       ymin: 0
-      ymax: 1.5
+      ymax: 25
       ylabel: events
       xlabel: "# of #it{b}-jets"
       xmin: 0
       xmax: 10
-    n-1/SR-1/mjsum:
+    n-1/SR-2/mjsum:
       texts:
         -
-          y: 0.8
-          label: "SR1"
+          y: 0.84
+          label: "Signal Region 1"
           <<: *topline
-      ymin: 0.75
+      ymin: 0
+      ymax: 6
       ylabel: events
       xlabel: "M_{J}^{#Sigma}"
     n-1/SR-3/mTb:
-      rebin: 4
+      rebin: 1
       texts:
         -
-          y: 0.8
-          label: "SR3"
+          y: 0.84
+          label: "Signal Region 3"
           <<: *topline
       ymin: 0
-      ymax: 0.75
+      ymax: 15
       ylabel: events
       xlabel: "m_{T}^{b}"
     n-1/SR-3/m_effective:
-      rebin: 4
-      canvas:
-        logy: true
+      rebin: 1
       texts:
         -
-          y: 0.8
-          label: "SR3"
+          y: 0.84
+          label: "Signal Region 3"
           <<: *topline
-      ymin: 0.01
-      ymax: 2
+      ymin: 0
+      ymax: 8
       ylabel: events
       xlabel: "m_{eff}"
     n-1/SR-3/met:
-      rebin: 4
-      canvas:
-        logy: true
+      rebin: 1
       texts:
         -
-          y: 0.8
-          label: "SR3"
+          y: 0.84
+          label: "Signal Region 3"
           <<: *topline
-      ymin: 0.01
-      ymax: 3
+      ymin: 0
+      ymax: 17.5
       ylabel: events
       xlabel: "#slash{E}_{T}"
     n-1/SR-3/multiplicity_jet:
       rebin: 1
       texts:
         -
-          y: 0.8
-          label: "SR3"
+          y: 0.84
+          label: "Signal Region 3"
           <<: *topline
       ymin: 0
-      ymax: 0.5
+      ymax: 25
       ylabel: events
       xlabel: "# of jets"
     n-1/SR-3/multiplicity_jet_b:
       rebin: 1
       texts:
         -
-          y: 0.8
-          label: "SR3"
+          y: 0.84
+          label: "Signal Region 3"
           <<: *topline
-      ymin: 0
-      ymax: 2
+      ymin: 0.1
+      ymax: 30000
+      canvas:
+        logy: true
       ylabel: events
       xlabel: "# of #it{b}-jets"
       xmin: 0
       xmax: 10
+    n-1/SR-3/mjsum:
+      texts:
+        -
+          y: 0.84
+          label: "Signal Region 1"
+          <<: *topline
+      ymin: 0
+      ymax: 12
+      ylabel: events

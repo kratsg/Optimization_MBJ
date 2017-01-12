@@ -10,3 +10,5 @@ do
   python ../Optimization/do_n-1_cuts.py ${files[*]} --supercuts $supercutsLocation --output $outputNMinus1 --boundaries boundaries.json -f --tree oTree --eventWeight event_weight
 
 done
+
+python ~/TakeOverTheWorld/totw.py --weights ../Optimization/weights.json --config TOTW/n-1_SR_${version}.yml --lumi 35 -i n-1 -b
