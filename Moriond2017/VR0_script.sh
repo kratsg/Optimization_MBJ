@@ -30,8 +30,8 @@ do
     python ../Optimization/optimize.py hash $summaryLocation --supercuts $supercutsLocation -o $outputHashLocation --use-summary
 
     outputFilePlots="VR0${i}_${lumi}_${version}"
-    python ../Optimization/graph-grid.py --summary $summaryLocation --lumi $lumi -o $outputFilePlots --do-run1 --run1-excl ../run1_limit.csv --run1-1sigma ../run1_limit_1sigma.csv -b
-    python ../Optimization/graph-cuts.py --summary $summaryLocation --lumi $lumi -o $outputFilePlots --do-run1 --run1-excl ../run1_limit.csv --run1-1sigma ../run1_limit_1sigma.csv -b --outputHash $outputHashLocation --supercuts $supercutsLocation
+    python ../Optimization/graph-grid.py --summary $summaryLocation --lumi $lumi -o $outputFilePlots --do-run2 --run2-excl ../run2_limit.csv --run2-1sigma ../run2_limit_1sigma.csv -b
+    python ../Optimization/graph-cuts.py --summary $summaryLocation --lumi $lumi -o $outputFilePlots -b --outputHash $outputHashLocation --supercuts $supercutsLocation
 
   done
 done
