@@ -34,7 +34,7 @@ done
 
 for lumi in 35
 do
-  python ../Optimization/find_optimal_signal_region.py --lumi $lumi --basedir $baseDir --massWindows ../massWindows_Gtt.txt --run2_csvfile ../run2_limit.csv --run2_1sigma_csvfile ../run2_limit_1sigma.csv --numSRs 3 --output ${version}
+  python ../Optimization/find_optimal_signal_region.py --lumi $lumi --basedir $baseDir --massWindows ../massWindows_Gtt.txt --do-run2 --run2-excl ../run2_limit.csv --run2-1sigma ../run2_limit_1sigma.csv --numSRs 3 --output ${version}
 
   python ../Optimization/write_optimal_signal_region_summary.py "${baseDir}/summary_SR*.json" -o summary_Gtt${version}_optimalSR_${lumi}.json
 
