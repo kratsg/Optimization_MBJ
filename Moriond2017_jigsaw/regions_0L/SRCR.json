@@ -1,0 +1,6 @@
+[
+  {"name": "SR1", "cuts": ["../Moriond2017/SR/0L/SR1Cuts/*.json"]},
+  {"name": "SR2", "cuts": ["../Moriond2017/SR/0L/SR2Cuts/*.json"]},
+  {"name": "SR3", "cuts": ["../Moriond2017/SR/0L/SR3Cuts/*.json"]},
+  {"name": "SR4", "cuts": ["../Moriond2017/SR/0L/SR4Cuts/*.json"]}
+]
