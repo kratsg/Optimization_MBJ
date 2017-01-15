@@ -1,11 +1,5 @@
 [
     {
-        "selections": "mTb >= {0}",
-        "st3": [
-            [80, 200, 40]
-        ]
-    },
-    {
         "selections": "dPhiMETMin >= {0}",
         "pivot": [0.4]
     },
