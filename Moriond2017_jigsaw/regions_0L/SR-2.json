@@ -1,19 +1,15 @@
 [
     {
-        "selections": "mTb >= {0}",
-	"pivot": [120.0]
-    },
-    {
         "selections": "dPhiMETMin >= {0}",
         "pivot": [0.4]
     },
     {
         "selections": "met >= {0}",
-	"pivot": [400.0]
+	"pivot": [450.0]
     },
     {
        "selections": "m_effective >= {0}",
-	"pivot": [2000.0]
+	"pivot": [1600.0]
     },
     {
         "selections": "multiplicity_jet >= {0}",
@@ -25,7 +21,7 @@
     },
     {
         "selections": "mjsum/1000 >= {0}",
-	"pivot": [200.0]
+	"pivot": [300.0]
     },
     {
         "selections": "razor_GG_mDeltaR >= {0}",

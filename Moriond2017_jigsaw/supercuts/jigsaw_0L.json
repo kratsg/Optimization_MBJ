@@ -18,14 +18,12 @@
     {
         "selections": "multiplicity_jet >= {0}",
         "st3": [
-            [7, 9, 1]
+            [6, 9, 1]
         ]
     },
     {
         "selections": "multiplicity_jet_b >= {0}",
-         "st3": [
-            [3, 5, 1]
-        ]
+        "pivot": [3]
     },
     {
         "selections": "mjsum/1000 >= {0}",

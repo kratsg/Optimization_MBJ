@@ -19,9 +19,7 @@
     },
     {
         "selections": "multiplicity_jet_b >= {0}",
-         "st3": [
-            [3, 5, 1]
-        ]
+        "pivot": [3]
     },
     {
         "selections": "mjsum/1000 >= {0}",
