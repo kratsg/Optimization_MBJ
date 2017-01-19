@@ -36,6 +36,7 @@ for lumi in 35
 do
   python ../Optimization/find_optimal_signal_region.py --lumi $lumi --basedir $baseDir --massWindows ../massWindows_Gtt.txt --do-run2 --run2-excl ../run2_limit.csv --run2-1sigma ../run2_limit_1sigma.csv --numSRs 3 --output ${version}
 
-  python ../Optimization/write_optimal_signal_region_summary.py "${baseDir}/summary_SR*.json" -o summary_Gtt${version}_optimalSR_${lumi}.json
+  python ../Optimization/write_optimal_signal_region_summary.py ${baseDir}/summary_SR*.json -o summary_Gtt${version}_optimalSR_${lumi}.json
 
+  python ../Optimization/summary-comparison.py --base-summary summary_baseline_${version}.json --comp-summary summary_Gtt${version}_optimalSR_${lumi}.json -o ${version}_optimalSR_lumi_${lumi}_compare_significance -b
 done
