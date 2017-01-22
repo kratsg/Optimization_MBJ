@@ -21,7 +21,7 @@
     },
     {
         "selections": "mjsum/1000 >= {0}",
-	"pivot": [100.0]
+	"pivot": [200.0]
     },
     {
         "selections": "m_transverse >= {0}",
