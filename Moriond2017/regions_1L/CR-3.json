@@ -20,8 +20,8 @@
 	"pivot": [3.0]
     },
     {
-        "selections": "mjsum/1000 >= {0}",
-	"pivot": [0.0]
+        "selections": "mjsum/1000 <= {0}",
+	"pivot": [200.0]
     },
     {
         "selections": "m_transverse <= {0}",
