@@ -1,0 +1,8 @@
+[
+  {"name": "CR1", "cuts": ["../Moriond2017/CR/0L/CR1Cuts/*.json"]},
+  {"name": "CR2", "cuts": ["../Moriond2017/CR/0L/CR2Cuts/*.json"]},
+  {"name": "CR3", "cuts": ["../Moriond2017/CR/0L/CR3Cuts/*.json"]},
+  {"name": "SR1", "cuts": ["../Moriond2017/SR/0L/SR1Cuts/*.json"]},
+  {"name": "SR2", "cuts": ["../Moriond2017/SR/0L/SR2Cuts/*.json"]},
+  {"name": "SR3", "cuts": ["../Moriond2017/SR/0L/SR3Cuts/*.json"]}
+]
