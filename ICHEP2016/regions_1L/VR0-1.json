@@ -1,0 +1,30 @@
+[
+    {
+        "selections": "mTb >= {0}",
+	"pivot": [120.0]
+    },
+    {
+        "selections": "met >= {0}",
+	"pivot": [450.0]
+    },
+    {
+       "selections": "m_effective >= {0}",
+	"pivot": [1400.0]
+    },
+    {
+        "selections": "multiplicity_jet >= {0}",
+	"pivot": [5.0]
+    },
+    {
+        "selections": "multiplicity_jet_b >= {0}",
+	"pivot": [3.0]
+    },
+    {
+        "selections": "mjsum/1000 >= {0}",
+	"pivot": [200.0]
+    },
+    {
+        "selections": "m_transverse <= {0}",
+        "pivot": [150.0]
+    }
+]

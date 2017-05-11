@@ -1,0 +1,6 @@
+[
+  {"name": "CR1", "cuts": ["../ICHEP2016/CR/0L/CR1Cuts/*.json"]},
+  {"name": "CR2", "cuts": ["../ICHEP2016/CR/0L/CR2Cuts/*.json"]},
+  {"name": "SR1", "cuts": ["../ICHEP2016/SR/0L/SR1Cuts/*.json"]},
+  {"name": "SR2", "cuts": ["../ICHEP2016/SR/0L/SR2Cuts/*.json"]}
+]

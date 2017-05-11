@@ -1,0 +1,8 @@
+[
+  {"name": "VR0-1", "cuts": ["../Moriond2017/VR0/1L/VR01Cuts/*.json"]},
+  {"name": "VR0-2", "cuts": ["../Moriond2017/VR0/1L/VR02Cuts/*.json"]},
+  {"name": "VR0-3", "cuts": ["../Moriond2017/VR0/1L/VR03Cuts/*.json"]},
+  {"name": "VR1-1", "cuts": ["../Moriond2017/VR1/1L/VR11Cuts/*.json"]},
+  {"name": "VR1-2", "cuts": ["../Moriond2017/VR1/1L/VR12Cuts/*.json"]},
+  {"name": "VR1-3", "cuts": ["../Moriond2017/VR1/1L/VR13Cuts/*.json"]}
+]
