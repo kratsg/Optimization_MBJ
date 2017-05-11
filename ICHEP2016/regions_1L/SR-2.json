@@ -1,30 +1,34 @@
 [
     {
-        "selections": "mTb >= {0}",
-	"pivot": [160.0]
+        "selections": "(signal_electrons_n + signal_muons_n) >= {0}",
+        "pivot": [1]
+    },
+    {
+        "selections": "mTb_min >= {0}",
+	"pivot": [120.0]
     },
     {
         "selections": "met >= {0}",
-	"pivot": [450.0]
+	"pivot": [350.0]
     },
     {
-       "selections": "m_effective >= {0}",
-	"pivot": [1800.0]
+       "selections": "meff_incl >= {0}",
+	"pivot": [1500.0]
     },
     {
-        "selections": "multiplicity_jet >= {0}",
+        "selections": "jets_n >= {0}",
 	"pivot": [6.0]
     },
     {
-        "selections": "multiplicity_jet_b >= {0}",
+        "selections": "bjets_n >= {0}",
 	"pivot": [3.0]
     },
     {
-        "selections": "mjsum/1000 >= {0}",
-	"pivot": [200.0]
+        "selections": "MJSum_rc_r08pt10 >= {0}",
+	"pivot": [150.0]
     },
     {
-        "selections": "m_transverse >= {0}",
-        "pivot": [150.0]
+        "selections": "mT >= {0}",
+        "pivot": [200.0]
     }
 ]

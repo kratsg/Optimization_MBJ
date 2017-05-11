@@ -70,7 +70,7 @@ def draw_hist(h, textFormat="1.0f"):
   h.SetMarkerColor(ROOT.kWhite)
   #ROOT.gStyle.SetPalette(51)
   ROOT.gStyle.SetPaintTextFormat(textFormat)
-  h.GetXaxis().SetTitleOffset(1.1)
+  h.GetXaxis().SetTitleOffset(1.0)
   h.GetYaxis().SetTitleOffset(1.0)
   h.GetXaxis().SetLabelSize(19)
   h.GetYaxis().SetLabelSize(17)

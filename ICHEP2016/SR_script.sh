@@ -1,27 +1,32 @@
 #!/bin/bash
 
 #files=$(find /Users/kratsg/2.4.19-0-0/${version}/*.root  -not -iname "*Gbb*" -not -iname "*data*")
-files+=($(find /faxbox2/user/mleblanc/multib_ichep2k16/hf_tag2.4.11-1-0/optin/user.*.root* -print0 | xargs -0))
-#files+=($(find /faxbox2/user/mleblanc/multib_ichep2k16/hf_tag2.4.11-0-0/optin/user.*/user.*.root* -print0 | xargs -0))
+#files+=($(find /faxbox2/user/mleblanc/multib_ichep2k16/hf_tag2.4.11-1-0/optin/user.*.root* -print0 | xargs -0))
+files+=($(find /faxbox2/user/mleblanc/multib_ichep2k16/hf_tag2.4.11-0-0/optin/user.*/user.*.root* -print0 | xargs -0))
+#files+=($(find /faxbox2/user/kratsg/MBJ/2.4.24-1-0/files/HF_tag2.4.24-1-0/user.*/*.root* -not -iname "*Gbb*" -not -iname "*data*"))
+#files+=($(find /faxbox/user/mleblanc/optin/user.*/user.*.root* -print0 | xargs -0))
 
 baseDir="SR/${version}"
 rm -rf $baseDir
 mkdir -p $baseDir
 
-for i in 1 2 
+for i in 1 2 3
 do
   supercutsLocation="regions_${version}/SR-${i}.json"
   cutsLocation="${baseDir}/SR${i}Cuts"
 
   echo 'cut'
-  rooptimize cut ${files[*]} --supercuts=$supercutsLocation -o $cutsLocation --numpy -b --eventWeight "weight_mc*weight_btag*weight_elec*weight_muon" --weightsFile weights.json --tree nominal --ncores=12
+  #rooptimize cut ${files[*]} --supercuts=$supercutsLocation -o $cutsLocation --numpy -b --eventWeight "weight_mc*weight_btag*weight_elec*weight_muon*weight_jvt*weight_pu" --weightsFile ../Optimization/weights.json --tree nominal --ncores=12
+  rooptimize cut ${files[*]} --supercuts=$supercutsLocation -o $cutsLocation --numpy -b --eventWeight "weight_mc" --weightsFile weights_old.json --tree nominal --ncores=12
+  #rooptimize cut ${files[*]} --supercuts=$supercutsLocation -o $cutsLocation --numpy -b --eventWeight "event_weight" --weightsFile ../Optimization/weights.json --tree nominal --ncores=12
 
-  for lumi in 10 15
+  for lumi in 10
   do
     significancesLocation="${baseDir}/SR${i}Significances_${lumi}"
 
     echo 'optimize'
-    rooptimize optimize --signal 3701* --bkgd 31* 36* 34* 410000 407009 407010 407018 407019 407020 407021 407011 410013 410014 410011 410012 410025 410026 410018 410019 410020 410021 --searchDirectory=$cutsLocation -b -o $significancesLocation --bkgdUncertainty=0.3 --bkgdStatUncertainty=0.3 --insignificance=0.5 --lumi $lumi
+    #rooptimize optimize --signal 3701* --bkgd 36* 34* 31* 41* 407* --searchDirectory=$cutsLocation -b -o $significancesLocation --bkgdUncertainty=0.3 --bkgdStatUncertainty=0.3 --insignificance=0.5 --lumi $lumi
+    rooptimize optimize --signal 3701* --bkgd 31* 361* 34* 410000 407009 407010 407011 410013 410014 410011 410012 410025 410026 410018 410019 410020 410021 410066 410067 410068 410073 410074 410075 410080 41001* --searchDirectory=$cutsLocation -b -o $significancesLocation --bkgdUncertainty=0.3 --bkgdStatUncertainty=0.3 --insignificance=0.5 --lumi $lumi
     #rooptimize optimize --signal 3701* --bkgd 41* 407* --searchDirectory=$cutsLocation -b -o $significancesLocation --bkgdUncertainty=0.3 --bkgdStatUncertainty=0.3 --insignificance=0.5 --lumi $lumi
 
     echo 'summary'
@@ -39,7 +44,7 @@ do
   done
 done
 
-for lumi in 10 15
+for lumi in 10
 do
   python find_optimal_signal_region-mlb.py --lumi $lumi --basedir $baseDir --massWindows ../massWindows_Gtt.txt --do-run2 --run2-excl run2_limit.csv --run2-1sigma run2_limit_1sigma.csv --numSRs 2 --output ${version}
 

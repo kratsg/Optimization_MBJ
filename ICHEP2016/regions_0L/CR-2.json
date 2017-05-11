@@ -4,11 +4,11 @@
         "pivot": [1]
     },
     {
-        "selections": "mTb >= {0}",
+        "selections": "mTb_min >= {0}",
 	"pivot": [0.0]
     },
     {
-        "selections": "dPhiMETMin >= {0}",
+        "selections": "dphi_min >= {0}",
         "pivot": [0.0]
     },
     {
@@ -16,19 +16,23 @@
 	"pivot": [400.0]
     },
     {
-       "selections": "m_effective >= {0}",
+       "selections": "meff_incl >= {0}",
 	"pivot": [1250.0]
     },
     {
-        "selections": "multiplicity_jet >= {0}",
+        "selections": "jets_n >= {0}",
 	"pivot": [7.0]
     },
     {
-        "selections": "multiplicity_jet_b >= {0}",
+        "selections": "bjets_n >= {0}",
 	"pivot": [3.0]
     },
     {
-        "selections": "m_transverse <= {0}",
+        "selections": "mT <= {0}",
         "pivot": [150.0]
+    },
+    {
+        "selections": "pass_MET    >= {0}",
+    	"pivot": [1.0]
     }
 ]
